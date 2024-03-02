@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}Регистрация{% endblock %}
+{% block nav %}
+    <ul>
+        <li><a href="/">Авторизация</a></li>
+    </ul>
+{% endblock %}
+{% block content %}
+
+        <div class="form-control">
+          <h2 class="reg-label">Регистрация</h2>
+          <ul>
+              <li>
+                  <label for="name">Имя:</label>
+                  <input type="text" id="name" name="name">
+              </li>
+              <li>
+                  <label for="surname">Фамилия:</label>
+                  <input type="text" id="surname" name="surname">
+              </li>
+              <li>
+                  <label for="password">Пароль:</label>
+                  <input type="password" id="password" name="password">
+              </li>
+			  <li>
+                  <label for="passwordconfirm">Подтверждение пароля:</label>
+                  <input type="password" id="passwordconfirm" name="passwordconfirm">
+              </li>
+			  <li>
+                  <label for="cardnumber">Номер карты:</label>
+                  <input type="password" id="cardnumber" name="cardnumber">
+              </li>
+          </ul>
+          <button class="login-button" class="reg-btn">Подтвердить</button>
+      </div>
+      
+      <script src="script.js"></script>
+
+{% endblock %}

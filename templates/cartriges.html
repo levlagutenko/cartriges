@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}Учет картриджей{% endblock %}
+{% block nav %}
+    <ul>
+        <li><a href="/">Авторизация</a></li>
+    </ul>
+{% endblock %}
+{% block content %}
+
+<h2>Учет картриджей</h2>
+
+    <div id="container" class="form-control">
+        <div>
+            <select class="form-control" required autofocus="autofocus">
+                <option disabled selected value="">Выберите картридж из списка</option>
+                <option value="option1">Опция 1</option>
+                <option value="option2">Опция 2</option>
+                <option value="option3">Опция 3</option>
+            </select>
+            <br>
+            <button type="button">Принять</button>
+            <button type="button"> Выдать</button>
+        </div>
+
+        <div id="calculator" class="form-control">
+            <input type="text" id="display" disabled>
+            <br>
+            <button type="button" onclick="appendToDisplay('1')">1</button>
+            <button type="button" onclick="appendToDisplay('2')">2</button>
+            <button type="button" onclick="appendToDisplay('3')">3</button>
+            <br>
+            <button type="button" onclick="appendToDisplay('4')">4</button>
+            <button type="button" onclick="appendToDisplay('5')">5</button>
+            <button type="button" onclick="appendToDisplay('6')">6</button>
+            <br>
+            <button type="button" onclick="appendToDisplay('7')">7</button>
+            <button type="button" onclick="appendToDisplay('8')">8</button>
+            <button type="button" onclick="appendToDisplay('9')">9</button>
+            <br>
+            <button type="button" class="zero" onclick="appendToDisplay('0')">0</button>
+        </div>
+    </div>
+
+    <script>
+        function appendToDisplay(value) {
+            document.getElementById("display").value += value;
+        }
+
+        function calculate() {
+            try {
+                document.getElementById("display").value = eval(document.getElementById("display").value);
+            } catch (error) {
+                document.getElementById("display").value = "Error";
+            }
+        }
+
+        function clearDisplay() {
+            document.getElementById("display").value = "";
+        }
+    </script>
+{% endblock %}
+``

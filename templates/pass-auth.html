@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Вход по паролю{% endblock %}
+{% block nav %}
+    <ul>
+        <li><a href="/registration">Регистрация</a></li>
+    </ul>
+{% endblock %}
+{% block content %}
+
+      <div class="auth-panel">
+        <h2>Вход по паролю</h2>
+        <div class="input-container" >
+
+          <input type="password" autofocus ="text" placeholder="Введите пароль">
+        </div>
+        <button class="login-button">Войти</button>
+      </div>
+
+{% endblock %}

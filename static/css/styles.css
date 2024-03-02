@@ -1,0 +1,246 @@
+* {
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+	font-weight: 300;
+    font-style: normal;
+    background-color: #252525; /* Цвет фона */
+    color: #fff; /* Цвет текста */    
+
+}
+
+
+
+body {
+    margin: 0;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+	font-weight: 300;
+    font-style: normal;
+    background-color: #333; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    background-image: none;
+    
+  }
+  
+  .logo img {
+    max-height: 100px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-image: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-left: 20px;
+  }
+  
+  nav ul li:first-child {
+    margin-left: 0;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Цвет текста */
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 15px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 1); /* Добавляем тень */
+	transition: background-color 0.2s;
+  }
+  
+    nav ul li a:active {
+        background-color: #3481B8;
+        color: #154889;
+        }
+  
+  nav ul li a:hover {
+    border-color: #4169E1; /* Цвет рамки при наведении */
+    background-color: rgba(255, 140, 0, 0.1); /* Цвет фона при наведении */
+    color: #4169E1; /* Цвет текста при наведении */
+    transform: scale(1.0); /* Увеличение размера текста при наведении */
+    box-shadow: 0 0 10px #4169E1; /* Увеличиваем тень при наведении */
+  }
+  
+
+  .separator.shadowed {
+    border: none;
+    height: 3px;
+    margin: 0; /* Отступ сверху и снизу от разделителя */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  
+
+  .auth-panel {
+    text-align: center;
+    margin-top: 0px; /* отступ сверху */
+  }
+  
+  .auth-panel h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 35px;
+  }
+  
+  .input-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; /* Центрирование элементов по горизонтали */
+  }
+  
+  .input-container input {
+  
+    width: 400px; /* ширина поля ввода */
+    border: 2px solid #536cbd;
+    border-radius: 5px;
+    font-size: 25px;
+  }
+  
+/* Стили для кнопки "Войти" */
+.login-button {
+    margin: 10px;
+    font-size: 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #fff; /* Цвет текста */
+    font-weight: bold;
+    padding: 5px 15px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 1); /* Мягкая тень */
+    cursor: pointer;
+	transition: background-color 0.2s;
+  }
+  
+  .login-button:hover {
+    border-color: #4169E1; /* Цвет рамки при наведении */
+    background-color: rgba(255, 140, 0, 0.1); /* Цвет фона при наведении */
+    color: #4169E1; /* Цвет текста при наведении */
+    transform: scale(1.0); /* Увеличение размера текста при наведении */
+    box-shadow: 0 0 10px #4169E1; /* Увеличиваем тень при наведении */
+  }
+  .login-button:active {
+        background-color: #3481B8;
+        color: #154889;
+        }
+
+
+footer {
+    display: flex; /* Используем flexbox */
+    justify-content: center; /* Выравниваем содержимое по горизонтали по центру */
+    align-items: center; /* Выравниваем содержимое по вертикали по центру */
+    height: 100px; /* Высота футера, если требуется */
+}
+
+.input-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Центрируем содержимое по горизонтали */
+}
+
+.input-container input {
+  padding: 10px; /* Добавляем отступы вокруг текста внутри поля ввода */
+  border: 1px solid #ccc; /* Добавляем границу для поля ввода */
+  border-radius: 5px; /* Скругляем углы */
+  font-size: 16px; /* Устанавливаем размер шрифта */
+}
+
+.input-container input:focus {
+  outline: none; /* Убираем обводку при фокусе */
+  border-color: #007bff; /* Изменяем цвет границы при фокусе */
+  box-shadow: 0 0 5px #007bff; /* Добавляем тень при фокусе */
+}
+
+
+.reg-panel {
+  width: 400px; /* Ширина панели регистрации */
+  margin: 0 auto; /* Центрирование по горизонтали */
+}
+
+h2 {
+  text-align: center; /* Выравнивание заголовка по центру */
+}
+
+ul {
+  
+  list-style-type: none; /* Убираем маркеры списка */
+  padding: 0; /* Убираем отступы внутри списка */
+}
+
+li {
+  margin-bottom: 20px; /* Отступ между каждой строкой регистрации */
+  text-align: left; /* Центрируем содержимое строки */
+}
+
+label {
+  display: inline-block; /* Показываем метку как блочный элемент */
+  width: 75px; /* Ширина метки */
+  margin-right: 10px;
+  margin-left: 10px; /* Отступ справа от метки */
+  text-align: right; /* Выравнивание текста метки по правому краю */
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 5px; /* Отступы внутри поля ввода */
+  width: 250px; /* Ширина поля ввода */
+  margin-bottom: 10px;
+  
+}
+
+        select, button {
+            padding: 18px;
+            margin: 5px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+		}
+
+		.form-control {
+			display: block;
+			width: 100%;
+			padding: 0.375rem 0.75rem;
+			font-size: 1rem;
+			line-height: 1.5;
+			color: #495057;
+			background-color: #696969;
+			background-clip: padding-box;
+			border: 1px solid #2F4F4F;
+			border-radius: 0.25rem;
+			transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        button:active {
+            background-color: #3481B8;
+            color: #154889;
+        }
+        #select {
+            width: 400px;
+        }
+        #container {
+            display: 300;
+            width: 300px;
+            justify-content: center;
+        }
+        #calculator {
+            margin-left: 20px;
+            width: 250px;
+        }
+        calculator button.zero {
+            width: 180px;
+        }

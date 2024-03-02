@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Вход по карте{% endblock %}
+{% block nav %}
+    <ul>
+        <li><a href="/registration">Регистрация</a></li>
+    </ul>
+{% endblock %}
+{% block content %}
+
+      <div class="auth-panel">
+        <h2>Вход по карте сотрудника</h2>
+        <div class="input-container">
+
+          <input autofocus ="text" placeholder="Приложите карту сотрудника" id="integer-input">
+        </div>
+          <br>
+        <button class="login-button">Войти</button>
+      </div>
+      <script src="script.js"></script>
+
+{% endblock %}
