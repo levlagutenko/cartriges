@@ -46,8 +46,20 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/card-auth')
+@app.route('/card-auth', methods=['POST', 'GET'])
 def card_auth():
+    if request.method == 'POST':
+        card_number = request.form['card_number']
+        print(card_number)
+
+        try:
+            card_from_db = db.session.query(Users).filter(Users.card_number == card_number).first()
+            user_from_db = card_from_db.name
+            print(user_from_db)
+            return render_template('cartriges.html')
+        except:
+            return render_template('auth-fail.html')
+
     return render_template('card-auth.html')
 
 

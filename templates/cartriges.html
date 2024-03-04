@@ -19,7 +19,7 @@
             </select>
             <br>
             <button type="button">Принять</button>
-            <button type="button"> Выдать</button>
+            <button type="button">Выдать</button>
         </div>
 
         <div id="calculator" class="form-control">
@@ -38,25 +38,11 @@
             <button type="button" onclick="appendToDisplay('9')">9</button>
             <br>
             <button type="button" class="zero" onclick="appendToDisplay('0')">0</button>
+            <br>
+            <button type="button" class='clear' onclick=clearDisplay('')>Сбросить</button>
         </div>
     </div>
 
-    <script>
-        function appendToDisplay(value) {
-            document.getElementById("display").value += value;
-        }
-
-        function calculate() {
-            try {
-                document.getElementById("display").value = eval(document.getElementById("display").value);
-            } catch (error) {
-                document.getElementById("display").value = "Error";
-            }
-        }
-
-        function clearDisplay() {
-            document.getElementById("display").value = "";
-        }
-    </script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 {% endblock %}
-``
+
