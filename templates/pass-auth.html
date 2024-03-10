@@ -6,14 +6,13 @@
     </ul>
 {% endblock %}
 {% block content %}
-
+    <form method="post">
       <div class="auth-panel">
         <h2>Вход по паролю</h2>
         <div class="input-container" >
-
-          <input type="password" autofocus ="text" placeholder="Введите пароль">
+          <input name="pass" type="password" autofocus ="text" placeholder="Введите пароль">
         </div>
         <button class="login-button">Войти</button>
       </div>
-
+    </form>
 {% endblock %}

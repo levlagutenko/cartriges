@@ -8,36 +8,53 @@
 
 }
 
-
-
 body {
     margin: 0;
     font-family: "Mulish", sans-serif;
     font-optical-sizing: auto;
-	font-weight: 300;
+	  font-weight: 300;
     font-style: normal;
     background-color: #333; /* Цвет фона */
     color: #fff; /* Цвет текста */
-
+    
   }
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
+  margin: 0;
+  
+}
+
   .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    
     padding: 10px 10px;
     background-image: none;
     
   }
   
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Добавляем внутренние отступы */
+    padding: 15px 15px;
+    background-image: none;
+    
+  }
+
   .logo img {
     max-height: 100px;
   }
   
   nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    
     background-image: none;
   }
   
@@ -74,32 +91,30 @@ body {
     color: #4169E1; /* Цвет текста при наведении */
     transform: scale(1.0); /* Увеличение размера текста при наведении */
     box-shadow: 0 0 10px #4169E1; /* Увеличиваем тень при наведении */
+    
   }
   
-
-  .separator.shadowed {
-    border: none;
-    height: 3px;
-    margin: 0; /* Отступ сверху и снизу от разделителя */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-  }
-  
-
   .auth-panel {
-    text-align: center;
-    margin-top: 0px; /* отступ сверху */
+    
+    flex-direction: column; /* Располагаем элементы вертикально */
+    align-items: center; /* Центрируем элементы по горизонтали */
+    margin-top: 10px; /* отступ сверху */
   }
-  
+
+
   .auth-panel h2 {
-    margin: 0;
+    margin: 10px;
+    padding-bottom: 10px;
     color: #fff;
     font-size: 35px;
+   
   }
   
   .input-container {
-    margin-top: 10px;
+    
     display: flex;
-    justify-content: center; /* Центрирование элементов по горизонтали */
+    justify-content: center; /* Центрирован
+    ие элементов по горизонтали */
   }
   
   .input-container input {
@@ -112,9 +127,7 @@ body {
   
 /* Стили для кнопки "Войти" */
 .login-button {
-    margin: 10px;
     font-size: 20px;
-    margin-top: 15px;
     text-decoration: none;
     color: #fff; /* Цвет текста */
     font-weight: bold;
@@ -124,7 +137,7 @@ body {
     transition: all 0.3s ease;
     box-shadow: 0 0 5px rgba(255, 255, 255, 1); /* Мягкая тень */
     cursor: pointer;
-	transition: background-color 0.2s;
+	  transition: background-color 0.2s;
   }
   
   .login-button:hover {
@@ -166,14 +179,25 @@ footer {
   box-shadow: 0 0 5px #007bff; /* Добавляем тень при фокусе */
 }
 
-
 .reg-panel {
   width: 400px; /* Ширина панели регистрации */
   margin: 0 auto; /* Центрирование по горизонтали */
 }
 
-h2 {
+h {
+  display: block;
   text-align: center; /* Выравнивание заголовка по центру */
+}
+
+#container {
+  position: relative;
+}
+
+h3 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 ul {
@@ -185,6 +209,7 @@ ul {
 li {
   margin-bottom: 20px; /* Отступ между каждой строкой регистрации */
   text-align: left; /* Центрируем содержимое строки */
+  
 }
 
 label {
@@ -213,6 +238,14 @@ input[type="password"] {
             box-shadow: 0 0 5px rgba(255, 255, 255, 1); /* Мягкая тень */
 		}
 
+.reg-label {
+  background-color: #6c7077;
+  border-radius: 5px;
+}
+
+ul {
+  border-radius: 5px;
+}
 		.form-control {
 		    margin: 0 auto;
 			display: block;
@@ -221,7 +254,7 @@ input[type="password"] {
 			font-size: 1rem;
 			line-height: 1.5;
 			color: #495057;
-			background-color: #191970;
+			background-color: #5a5a64;
 			background-clip: padding-box;
 			border: 1px solid #2F4F4F;
 			border-radius: 0.25rem;
@@ -237,6 +270,8 @@ input[type="password"] {
         }
         #container {
             display: 300;
+            margin: 0 auto;
+            text-align: center;
             width: 300px;
             justify-content: center;
         }
@@ -247,3 +282,32 @@ input[type="password"] {
         calculator button.zero {
             width: 180px;
         }
+
+/*  стили flash сообщений */
+
+.flash-messages {
+  position: center;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.flash-message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.alert-success {
+  background-color: #B22222;
+  border-color: #0000FF;;
+  color: #ffffff;
+}
+
+.alert-error {
+  background-color: #B22222;
+  border-color: #0000FF;
+  color: #ffffff;
+}
+
+        

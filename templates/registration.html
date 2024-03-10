@@ -7,33 +7,34 @@
 {% endblock %}
 {% block content %}
 
+ <form method="post">
         <div class="form-control">
           <h2 class="reg-label">Регистрация</h2>
           <ul>
               <li>
                   <label for="name">Имя:</label>
-                  <input type="text" id="name" name="name">
+                  <input type="text" id="name" name="reg_name" required>
               </li>
               <li>
                   <label for="surname">Фамилия:</label>
-                  <input type="text" id="surname" name="surname">
+                  <input type="text" id="surname" name="reg_surname" required>
               </li>
               <li>
                   <label for="password">Пароль:</label>
-                  <input type="password" id="password" name="password">
+                  <input type="password" id="password" name="reg_password" required>
               </li>
 			  <li>
                   <label for="passwordconfirm">Подтверждение пароля:</label>
-                  <input type="password" id="passwordconfirm" name="passwordconfirm">
+                  <input type="password" id="passwordconfirm" name="reg_passwordconfirm" required>
               </li>
 			  <li>
                   <label for="cardnumber">Номер карты:</label>
-                  <input type="password" id="cardnumber" name="cardnumber">
+                  <input type="password" id="cardnumber" name="reg_cardnumber" required>
               </li>
           </ul>
-          <button class="login-button" class="reg-btn">Подтвердить</button>
+          <button class="login-button" class="submit">Подтвердить</button>
       </div>
-      
+ </form>
       <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 {% endblock %}

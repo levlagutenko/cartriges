@@ -7,39 +7,39 @@
 {% endblock %}
 {% block content %}
 
-<h2>Учет картриджей</h2>
-
-    <div id="container" class="form-control">
+    <div id="container">
         <div>
-            <select class="form-control" required autofocus="autofocus">
-                <option disabled selected value="">Выберите картридж из списка</option>
-                <option value="option1">Опция 1</option>
-                <option value="option2">Опция 2</option>
-                <option value="option3">Опция 3</option>
+            <form action="/submit" method="post">
+            <select class="form-control" id="cartrige" name="cartrige" required autofocus="autofocus">
+                <option value="option" selected>Выберите картридж из списка</option>
+                {% for cartrige in cartriges %}
+                    <option value="{{ cartrige.id }}">{{ cartrige.name }}</option>
+                {% endfor %}
             </select>
             <br>
             <button type="button">Принять</button>
             <button type="button">Выдать</button>
+           </form>
         </div>
 
-        <div id="calculator" class="form-control">
-            <input type="text" id="display" disabled>
-            <br>
+        <div id="calculator" class="form-cart">
+            <input type="text" class="input-container" disabled>
+            
             <button type="button" onclick="appendToDisplay('1')">1</button>
             <button type="button" onclick="appendToDisplay('2')">2</button>
             <button type="button" onclick="appendToDisplay('3')">3</button>
-            <br>
+            
             <button type="button" onclick="appendToDisplay('4')">4</button>
             <button type="button" onclick="appendToDisplay('5')">5</button>
             <button type="button" onclick="appendToDisplay('6')">6</button>
-            <br>
+            
             <button type="button" onclick="appendToDisplay('7')">7</button>
             <button type="button" onclick="appendToDisplay('8')">8</button>
             <button type="button" onclick="appendToDisplay('9')">9</button>
-            <br>
+            
             <button type="button" class="zero" onclick="appendToDisplay('0')">0</button>
-            <br>
-            <button type="button" class='clear' onclick=clearDisplay('')>Сбросить</button>
+            
+            <button type="button" class='clear' onclick=clearDisplay()>Сбросить</button>
         </div>
     </div>
 
