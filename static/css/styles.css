@@ -1,163 +1,152 @@
 * {
-    font-family: "Mulish", sans-serif;
-    font-optical-sizing: auto;
-	font-weight: 300;
-    font-style: normal;
-    background-color: #252525; /* Цвет фона */
-    color: #fff; /* Цвет текста */    
-
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  background-color: #252525; /* Цвет фона */
+  color: #fff; /* Цвет текста */
 }
 
 body {
-    margin: 0;
-    font-family: "Mulish", sans-serif;
-    font-optical-sizing: auto;
-	  font-weight: 300;
-    font-style: normal;
-    background-color: #333; /* Цвет фона */
-    color: #fff; /* Цвет текста */
-    
-  }
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  background-color: #333; /* Цвет фона */
+  color: #fff; /* Цвет текста */
+}
 
 .main-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   margin: 0;
-  
 }
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-    
-    padding: 10px 10px;
-    background-image: none;
-    
-  }
-  
-  .main-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px; /* Добавляем внутренние отступы */
-    padding: 15px 15px;
-    background-image: none;
-    
-  }
+.container {
+  display: flex;
+  justify-content: space-between;
 
-  .logo img {
-    max-height: 100px;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 10px;
-    
-    background-image: none;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-left: 20px;
-  }
-  
-  nav ul li:first-child {
-    margin-left: 0;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #fff; /* Цвет текста */
-    font-size: 20px;
-    font-weight: bold;
-    padding: 5px 15px;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 1); /* Добавляем тень */
-	transition: background-color 0.2s;
-  }
-  
-    nav ul li a:active {
-        background-color: #3481B8;
-        color: #154889;
-        }
-  
-  nav ul li a:hover {
-    border-color: #4169E1; /* Цвет рамки при наведении */
-    background-color: rgba(255, 140, 0, 0.1); /* Цвет фона при наведении */
-    color: #4169E1; /* Цвет текста при наведении */
-    transform: scale(1.0); /* Увеличение размера текста при наведении */
-    box-shadow: 0 0 10px #4169E1; /* Увеличиваем тень при наведении */
-    
-  }
-  
-  .auth-panel {
-    
-    flex-direction: column; /* Располагаем элементы вертикально */
-    align-items: center; /* Центрируем элементы по горизонтали */
-    margin-top: 10px; /* отступ сверху */
-  }
+  padding: 10px 10px;
+  background-image: none;
+}
 
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Добавляем внутренние отступы */
+  padding: 15px 15px;
+  background-image: none;
+}
 
-  .auth-panel h2 {
-    margin: 10px;
-    padding-bottom: 10px;
-    color: #fff;
-    font-size: 35px;
-   
-  }
-  
-  .input-container {
-    
-    display: flex;
-    justify-content: center; /* Центрирован
+.logo img {
+  max-height: 100px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 10px;
+
+  background-image: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff; /* Цвет текста */
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 15px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 1); /* Добавляем тень */
+  transition: background-color 0.2s;
+}
+
+nav ul li a:active {
+  background-color: #3481b8;
+  color: #154889;
+}
+
+nav ul li a:hover {
+  border-color: #4169e1; /* Цвет рамки при наведении */
+  background-color: rgba(255, 140, 0, 0.1); /* Цвет фона при наведении */
+  color: #4169e1; /* Цвет текста при наведении */
+  transform: scale(1); /* Увеличение размера текста при наведении */
+  box-shadow: 0 0 10px #4169e1; /* Увеличиваем тень при наведении */
+}
+
+.auth-panel {
+  flex-direction: column; /* Располагаем элементы вертикально */
+  align-items: center; /* Центрируем элементы по горизонтали */
+  margin-top: 10px; /* отступ сверху */
+}
+
+.auth-panel h2 {
+  margin: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  font-size: 35px;
+}
+
+.input-container {
+  color: white;
+  display: flex;
+  justify-content: center; /* Центрирован
     ие элементов по горизонтали */
-  }
-  
-  .input-container input {
-  
-    width: 400px; /* ширина поля ввода */
-    border: 2px solid #536cbd;
-    border-radius: 5px;
-    font-size: 25px;
-  }
-  
+}
+
+.input-container input {
+  width: 400px; /* ширина поля ввода */
+  border: 2px solid #536cbd;
+  border-radius: 5px;
+  font-size: 25px;
+}
+
 /* Стили для кнопки "Войти" */
 .login-button {
-    font-size: 20px;
-    text-decoration: none;
-    color: #fff; /* Цвет текста */
-    font-weight: bold;
-    padding: 5px 15px;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 1); /* Мягкая тень */
-    cursor: pointer;
-	  transition: background-color 0.2s;
-  }
-  
-  .login-button:hover {
-    border-color: #4169E1; /* Цвет рамки при наведении */
-    background-color: rgba(255, 140, 0, 0.1); /* Цвет фона при наведении */
-    color: #4169E1; /* Цвет текста при наведении */
-    transform: scale(1.0); /* Увеличение размера текста при наведении */
-    box-shadow: 0 0 10px #4169E1; /* Увеличиваем тень при наведении */
-  }
-  .login-button:active {
-        background-color: #3481B8;
-        color: #154889;
-        }
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff; /* Цвет текста */
+  font-weight: bold;
+  padding: 5px 15px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 1); /* Мягкая тень */
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
 
+.login-button:hover {
+  border-color: #4169e1; /* Цвет рамки при наведении */
+  background-color: rgba(255, 140, 0, 0.1); /* Цвет фона при наведении */
+  color: #4169e1; /* Цвет текста при наведении */
+  transform: scale(1); /* Увеличение размера текста при наведении */
+  box-shadow: 0 0 10px #4169e1; /* Увеличиваем тень при наведении */
+}
+.login-button:active {
+  background-color: #3481b8;
+  color: #154889;
+}
 
 footer {
-    display: flex; /* Используем flexbox */
-    justify-content: center; /* Выравниваем содержимое по горизонтали по центру */
-    align-items: center; /* Выравниваем содержимое по вертикали по центру */
-    height: 100px; /* Высота футера, если требуется */
+  display: flex; /* Используем flexbox */
+  justify-content: center; /* Выравниваем содержимое по горизонтали по центру */
+  align-items: center; /* Выравниваем содержимое по вертикали по центру */
+  height: 100px; /* Высота футера, если требуется */
 }
 
 .input-container {
@@ -184,13 +173,15 @@ footer {
   margin: 0 auto; /* Центрирование по горизонтали */
 }
 
-h {
+h3 {
   display: block;
   text-align: center; /* Выравнивание заголовка по центру */
 }
 
 #container {
-  position: relative;
+  position: flex;
+  text-align: center;
+  align-items: center;
 }
 
 h3 {
@@ -201,23 +192,23 @@ h3 {
 }
 
 ul {
-  
   list-style-type: none; /* Убираем маркеры списка */
-  padding: 0; /* Убираем отступы внутри списка */
+  padding: 10px; /* Убираем отступы внутри списка */
+  border-radius: 15px;
 }
 
 li {
   margin-bottom: 20px; /* Отступ между каждой строкой регистрации */
   text-align: left; /* Центрируем содержимое строки */
-  
 }
 
 label {
   display: inline-block; /* Показываем метку как блочный элемент */
-  width: 75px; /* Ширина метки */
+  width: 190px; /* Ширина метки */
   margin-right: 10px;
   margin-left: 10px; /* Отступ справа от метки */
-  text-align: right; /* Выравнивание текста метки по правому краю */
+  text-align: left; /* Выравнивание текста метки по правому краю */
+  font-size: 23px;
 }
 
 input[type="text"],
@@ -225,63 +216,74 @@ input[type="password"] {
   padding: 5px; /* Отступы внутри поля ввода */
   width: 250px; /* Ширина поля ввода */
   margin-bottom: 10px;
-  
 }
 
-        select, button {
-            padding: 18px;
-            margin: 5px;
-            font-size: 18px;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: background-color 0.2s;
-            box-shadow: 0 0 5px rgba(255, 255, 255, 1); /* Мягкая тень */
-		}
+select,
+button {
+  color: white;
+  padding: 18px;
+  margin: 5px;
+  font-size: 22px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 1); /* Мягкая тень */
+}
 
 .reg-label {
-  background-color: #6c7077;
+  background-color: #252525;
   border-radius: 5px;
+  text-align: center;
+  font-size: 30px;
+
+}
+
+option {
+  color: white;
 }
 
 ul {
-  border-radius: 5px;
+  border-radius: 15px;
+  
 }
-		.form-control {
-		    margin: 0 auto;
-			display: block;
-			width: 100%;
-			padding: 0.375rem 0.75rem;
-			font-size: 1rem;
-			line-height: 1.5;
-			color: #495057;
-			background-color: #5a5a64;
-			background-clip: padding-box;
-			border: 1px solid #2F4F4F;
-			border-radius: 0.25rem;
-			transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-			box-shadow: 0 0 5px rgba(255, 255, 255, 1); /* Мягкая тень */
-        }
-        button:active {
-            background-color: #3481B8;
-            color: #154889;
-        }
-        #select {
-            width: 400px;
-        }
-        #container {
-            display: 300;
-            margin: 0 auto;
-            text-align: center;
-            width: 300px;
-            justify-content: center;
-        }
-        #calculator {
-            margin-left: 20px;
-            width: 250px;
-        }
-        calculator button.zero {
-            width: 180px;
-        }
+.form-control {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #f7f7f7;
+  background-color: #2d2d33;
+  background-clip: padding-box;
+  border: 1px solid #2f4f4f;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 1); /* Мягкая тень */
+}
+button:active {
+  background-color: #3481b8;
+  color: #154889;
+}
+#select {
+  width: 400px;
+}
+#container {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  width: 350px;
+  justify-content: center;
+  align-items: center;
+}
+#calculator {
+  width: 280px;
+  color: #dce6fc;
+  display: inline-block;
+}
+calculator button.zero {
+  width: 180px;
+}
 
 /*  стили flash сообщений */
 
@@ -299,15 +301,117 @@ ul {
 }
 
 .alert-success {
-  background-color: #B22222;
-  border-color: #0000FF;;
+  background-color: #b22222;
+  border-color: #0000ff;
   color: #ffffff;
 }
 
 .alert-error {
-  background-color: #B22222;
-  border-color: #0000FF;
+  background-color: #b22222;
+  border-color: #0000ff;
   color: #ffffff;
 }
 
-        
+.clear {
+  width: 175px;
+  height: 80px;
+}
+
+.calc-number-btn {
+  width: 80px;
+  height: 80px;
+}
+
+#calc-bottom-panel {
+  margin-top: 35px;
+  width: 280px;
+  color: #dce6fc;
+  display: inline-block;
+}
+
+#calc-top-panel {
+  display: inline-block;
+  text-align: center;
+  width: 280px;
+  margin-bottom: 20px;
+}
+
+#cartrige-in,
+#cartrige-out {
+  width: 127px;
+  height: 80px;
+  text-decoration: none;
+  color: #fff; /* Цвет текста */
+  font-weight: bold;
+  padding: 5px 15px;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 1); /* Мягкая тень */
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#cartrige-in:hover {
+  border-color: #4169e1; /* Цвет рамки при наведении */
+  background-color: rgba(255, 140, 0, 0.1); /* Цвет фона при наведении */
+  color: #4169e1; /* Цвет текста при наведении */
+  transform: scale(1); /* Увеличение размера текста при наведении */
+  box-shadow: 0 0 10px #4169e1; /* Увеличиваем тень при наведении */
+}
+
+#cartrige-out:hover {
+  border-color: #4169e1; /* Цвет рамки при наведении */
+  background-color: rgba(255, 140, 0, 0.1); /* Цвет фона при наведении */
+  color: #4169e1; /* Цвет текста при наведении */
+  transform: scale(1); /* Увеличение размера текста при наведении */
+  box-shadow: 0 0 10px #4169e1; /* Увеличиваем тень при наведении */
+}
+
+#cartrige-in:active {
+  background-color: #3481b8;
+  color: #154889;
+}
+
+
+#cartrige-out:active {
+  background-color: #3481b8;
+  color: #154889;
+}
+
+#calc-input {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  text-align: center;
+  justify-self: center;
+  width: 280px;
+  height: 35px;
+  font-size: 25px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+#cartrige {
+  width: 280px;
+  font-size: 16px;
+}
+
+#name,
+#surname,
+#password,
+#passwordconfirm,
+#cardnumber {
+  display: inline-block;
+  text-align: left;
+  
+  width: 280px;
+  height: 35px;
+  font-size: 20px;
+  border-radius: 15px;
+  border: 1px solid;
+}
+
+.reg-cont {
+  text-align: center;
+}

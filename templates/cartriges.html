@@ -13,34 +13,43 @@
             <select class="form-control" id="cartrige" name="cartrige" required autofocus="autofocus">
                 <option value="option" selected>Выберите картридж из списка</option>
                 {% for cartrige in cartriges %}
-                    <option value="{{ cartrige.id }}">{{ cartrige.name }}</option>
+                    <option value="{{ cartrige.id }}">{{ cartrige }}</option>
                 {% endfor %}
             </select>
             <br>
-            <button type="button">Принять</button>
-            <button type="button">Выдать</button>
+
            </form>
         </div>
 
-        <div id="calculator" class="form-cart">
-            <input type="text" class="input-container" disabled>
+        <div id="calculator" >
+            <div id="calc-top-panel">
+                <input type="text" class="input-container" id="calc-input" disabled>
+            </div>
+
+            <button class="calc-number-btn" type="button" onclick="appendToDisplay('1')">1</button>
+            <button class="calc-number-btn" type="button" onclick="appendToDisplay('2')">2</button>
+            <button class="calc-number-btn" type="button" onclick="appendToDisplay('3')">3</button>
             
-            <button type="button" onclick="appendToDisplay('1')">1</button>
-            <button type="button" onclick="appendToDisplay('2')">2</button>
-            <button type="button" onclick="appendToDisplay('3')">3</button>
+            <button class="calc-number-btn" type="button" onclick="appendToDisplay('4')">4</button>
+            <button class="calc-number-btn" type="button" onclick="appendToDisplay('5')">5</button>
+            <button class="calc-number-btn" type="button" onclick="appendToDisplay('6')">6</button>
             
-            <button type="button" onclick="appendToDisplay('4')">4</button>
-            <button type="button" onclick="appendToDisplay('5')">5</button>
-            <button type="button" onclick="appendToDisplay('6')">6</button>
+            <button class="calc-number-btn" type="button" onclick="appendToDisplay('7')">7</button>
+            <button class="calc-number-btn" type="button" onclick="appendToDisplay('8')">8</button>
+            <button class="calc-number-btn" type="button" onclick="appendToDisplay('9')">9</button>
             
-            <button type="button" onclick="appendToDisplay('7')">7</button>
-            <button type="button" onclick="appendToDisplay('8')">8</button>
-            <button type="button" onclick="appendToDisplay('9')">9</button>
-            
-            <button type="button" class="zero" onclick="appendToDisplay('0')">0</button>
+            <button class="calc-number-btn" type="button" class="zero" onclick="appendToDisplay('0')">0</button>
             
             <button type="button" class='clear' onclick=clearDisplay()>Сбросить</button>
+
         </div>
+
+        <div id="calc-bottom-panel">
+            <button type="button" id="cartrige-in">Принять</button>
+            <button type="button" id="cartrige-out">Выдать</button>
+        </div>
+
+
     </div>
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
