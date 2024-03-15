@@ -17,6 +17,9 @@ app.secret_key = 'Qq23514789'
 app.config['SQLALCHEMY_DATABASE_URI'] = (f'mssql+pyodbc://{username}:{password}@{server}/{database}?driver={driver}')
 db = SQLAlchemy(app)
 
+# Создаем модели в базе данных
+
+
 class Users(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
@@ -84,18 +87,22 @@ def registration():
         reg_passwordconfirm = request.form['reg_passwordconfirm']
         reg_cardnumber = request.form['reg_cardnumber']
 
-        if not reg_name or not reg_surname or not reg_password or not reg_cardnumber:   #### Проверка на обязательные поля
+        # Проверка на обязательные поля
+        if not reg_name or not reg_surname or not reg_password or not reg_cardnumber:
             flash('Заполните обязательные поля', 'error')
             return redirect('/registration')
 
-        elif reg_password != reg_passwordconfirm:   #### Проверка на совпадения пароля и подтверждения
+        # Проверка на совпадения пароля и подтверждения
+        elif reg_password != reg_passwordconfirm:
             flash('Пароль и подтверждение не совпадают', 'error')
             return redirect('/registration')
 
-        reg_user_name = reg_name + ' ' + reg_surname    #### Складываем имя и фамилию для добавления в базу
+        # Складываем имя и фамилию для добавления в базу
+        reg_user_name = reg_name + ' ' + reg_surname
 
+        # Добавляем нового пользователя в базу
         try:
-            new_user = Users(name=reg_user_name, password=reg_password, card_number=reg_cardnumber) #### Добавляем нового пользователя в базу
+            new_user = Users(name=reg_user_name, password=reg_password, card_number=reg_cardnumber)
             db.session.add(new_user)
             db.session.commit()
             flash('Регистрация выполнена', 'succes')
@@ -107,7 +114,11 @@ def registration():
 @app.route('/cartriges', methods=['POST', 'GET'])
 def cartriges():
 
-    cartriges = db.session.query(Cartriges.cartrige).all() #### Выбираем все картриджи из БД для добавления в комбобокс
+    # Выбираем все картриджи из БД для добавления в комбобокс
+    cartriges = db.session.query(Cartriges.cartrige).all()
+    # Преобразуем список с кортежами в список значений
+    cartriges = [value[0] for value in cartriges]
+
 
     return render_template('cartriges.html', cartriges=cartriges)
 
